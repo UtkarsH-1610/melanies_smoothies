@@ -18,7 +18,7 @@ my_dataframe = session.table(
 
 pd_df = my_dataframe.to_pandas()
 
-st.dataframe(pd_df)
+# st.dataframe(pd_df)
 
 ingredients_list = st.multiselect(
     'Choose upto 5 ingredients:',
@@ -43,7 +43,7 @@ if ingredients_list:
             f"https://my.smoothiefroot.com/api/fruit/{search_on}"
         )
 
-        # st.dataframe(response.json(), use_container_width=True)
+        st.dataframe(response.json(), use_container_width=True)
 
     my_insert_stmt = f"""
         INSERT INTO smoothies.public.orders (ingredients, name_on_order)
