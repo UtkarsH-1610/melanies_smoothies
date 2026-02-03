@@ -45,12 +45,12 @@ if ingredients_list:
 
         st.subheader(fruit_chosen + ' Nutrition Information')
 
-        fruitvice_response = requests.get(
-            f"https://my.fruitvice.com/api/fruit/{search_on}"
+        smoothiefroot_response = requests.get(
+            f"https://my.smoothiefroot.com/api/fruit/{search_on}"
         )
 
         st.dataframe(
-            fruitvice_response.json(),
+            smoothiefroot_response.json(),
             use_container_width=True
         )
 
